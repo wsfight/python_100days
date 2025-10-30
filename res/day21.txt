@@ -1,0 +1,17 @@
+在Python中，我们可以将运行时会出现状况的代码放在try代码块中，
+在try后面可以跟上一个或多个except块来捕获异常并进行相应的处理。
+例如，在上面的代码中，文件找不到会引发FileNotFoundError，指定了未知的编码会引发LookupError，
+而如果读取文件时无法按指定编码方式解码文件会引发UnicodeDecodeError，所以我们在try后面跟上了三个exce
+pt分别处理这三种不同的异常状况。在except后面，我们还可以加上else代码块，这是try 中的代码没有出现异常时会执行的
+代码，而且else中的代码不会再进行异常捕获，也就是说如果遇到异常状况，程序会因异常而终止并报告异常信息。最后我们使用fi
+nally代码块来关闭打开的文件，释放掉程序中获取的外部资源。由于finally块的代码不论程序正常还是异常都会执行，甚至是调用
+了sys模块的exit函数终止Python程序，finally块中的代码仍然会被执行（因为exit函数的本质是引发了SystemExit异常），因此我们把final
+ly代码块称为“总是执行代码块”，它最适合用来做释放外部资源的操作。
+
+Python中内置了大量的异常类型，除了上面代码中用到的异常类型以及之前的课程中遇到过的异常类型外，还有许多的异常类型，其继承结构如下所示。
+author:vegetabledog
+version:1.0
+author:vegetabledog
+version:1.0
+author:vegetabledog
+version:1.0
